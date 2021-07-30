@@ -1,0 +1,264 @@
+/*Note
+
+vw: viewport width: a relative length that relative to 1% of the width of the viewport
+viewport = browser window size. if viewport is 100cm wide => 1vw = 1cm
+
+margin: 0 auto: set margin top and bottom to 0 and left and right is auto 
+(to horizontally center the element within its container)
+
+
+*/
+body {
+    top: 0;
+    margin: 0 auto;
+    background-color: #e7e7e7;
+}
+
+.title-all-p{
+    padding-top: 0.5vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center; 
+}
+
+.title-all-ul{
+    list-style: none;
+    margin-top: 0;
+}
+
+.title-all-li{
+    padding-top: 0.2vw;
+    color: white;
+    font-weight: bold;
+    text-align:center;
+    font-size: 1vw; 
+}
+
+.home{
+    margin-top: 0;
+    font-size: 0.75vw; 
+    color: white;
+    text-decoration: none;
+}
+
+.left {
+    border-right-style: dotted;
+    border-right-color: #d2d2d2;
+    width: 70%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    padding-top: 2.5%;
+}
+
+.right {
+    width: 25%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.pre-header {
+    content: url('../image/preheader.jpg');
+    width: 50%;
+    margin: 0 auto;
+}
+
+.wrap-content {
+    background-image: url('../image/bg.jpg');
+    background-repeat-x: no-repeat;
+    background-size: 100%; 
+    width: 50%;
+    justify-content: center;
+    margin: 0 auto;
+}
+.container{
+    width: 85%;
+    display: flex;
+    margin: 0 auto;    
+}
+.image-article {
+    width: 100%;
+}
+
+.banner {
+    background-image: url('../image/header.jpg');
+    background-size: 100%;
+    width: 50%;
+    height: 4.4vw;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.navigation {
+    background-image: url('../image/menu.jpg');
+    background-size: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 1.85vw;
+}
+
+.footer {
+    background-image: url('../image/footer.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 50%;
+    height: 5vw;
+}
+
+.page-search {
+    padding: 0 10px;
+    border-right: solid 1px;
+}
+
+.wrap-all{
+    font-size: 1vw;
+    font: sans-serif;
+    color: #122319;
+}
+
+.title{
+    font-size: 1.25vw;
+    color: #122319;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.author{
+    color: gray;
+    margin-top: 1.5rem;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.title-page{
+    font-size: 1.25vw;
+    font-weight: bold;
+    margin-top: 0;
+    color: #122319;
+}
+
+.search-title{
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+
+.search-form{
+    display: flex;
+}
+
+.search-text{
+    border-style: solid;
+    border-spacing: 3px;
+    border-color: gray;
+    width: 8vw;
+    height: 1vw;
+}
+
+.search-submit{
+    color: #122319;
+    border-style: none;
+    background: none;
+}
+
+.article-title{
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+
+.list-recent {
+    list-style: none;
+    padding: 0rem;
+}
+
+.recent{
+    color: #122319;
+    text-decoration: underline;
+}
+
+.li-recent{
+    margin-top: 1.5rem;
+}
+
+/*If width of monitor smaller than 1024px (display resolution 1024x768 or worse)
+  Turn website to full entire screen
+*/
+@media only screen and (max-width: 1024px) {
+    .pre-header{
+        width: 100%;
+    }
+
+    .banner{
+        width: 100%;
+    }
+
+    .navigation{
+        width: 100%;
+    }
+
+    .wrap-content{
+        width: 100%;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+    .wrap-all{
+        font-size: 2vw;
+    }
+
+    .title-all-p{
+        font-size: 2.5vw;
+    }
+
+    .home{
+        font-size: 2.25vw;
+    }
+
+    .title{
+        font-size: 2.25vw;
+    }
+
+    .title-page{
+        font-size: 2.25vw;
+    }
+
+    .search-title {
+        font-size: 2.25vw;
+    }
+
+    .article-title{
+        font-size: 2.25vw;
+    }
+
+    .navigation{
+        height: 3vw;
+    }
+
+    .search-text{
+        width: 16vw;
+        height: 2vw;
+    }
+}
+
+/*If width of monitor smaller than 600px (mobile mode)*/
+@media only screen and (max-width: 600px) {
+    .left{
+        width: 95%;
+        border-right: hidden;
+        border-bottom: dotted;
+        border-bottom-color: #d2d2d2;
+    }
+
+    .right{
+        width: 90%;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+}
